@@ -10,7 +10,7 @@ The original version, which does not follow accessibility guidelines, can be fou
 ## Accessibility Guidelines Implemented
 The following improvements will be made to ensure the website meets accessibility standards:
 
-- **Color Contrast**: The contrast ratio between text and background will be at least **4.5:1** to improve readability for visually impaired users.
+- **Color Contrast**: The contrast ratio between text and background will be at least **7:1** to improve readability for visually impaired users.
 - **Scalable Text**: Users will be able to resize text without loss of functionality or readability.
 - **Alternative Text (Alt-Text)**: All images and non-text elements will include descriptive alt attributes.
 - **Keyboard Navigation**: The website will be fully operable without a mouse, ensuring that all interactive elements are accessible via keyboard inputs.

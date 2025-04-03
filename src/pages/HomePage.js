@@ -8,6 +8,9 @@ function HomePage() {
 
     return (
         <div>
+
+            <a href="#container" className="skip-to-content">Skip to Content</a>
+
             <HomeHeader />
 
             <div className="top-image">

@@ -64,7 +64,7 @@ html, body {
 }
 
 
-.header-buttons {
+.header-buttons-sports {
   display: flex;
   gap: 10px;
   margin-left: 450px;
@@ -90,7 +90,7 @@ html, body {
   color: #FFFFFF;
 }
 
-.buy-btn {
+.buy-btn-sports {
   background-color: #ffeb18;
   color: #222222;
 }
@@ -452,7 +452,7 @@ html, body {
 }
 
 .menu-title-sports {
-  font-size: 13px;
+  font-size: 1rem;
   line-height: 32px;
   color: #a11014;
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
@@ -581,69 +581,4 @@ html, body {
   flex-direction: column;
   gap: 0px;
   margin-top: -5px;
-}
-
-
-@media (max-width: 768px) {
-  .main-header {
-    display: none;
-  }
-
-  .header-left {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .sports-header ul {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-buttons {
-    justify-content: center;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .sports-header {
-    display: none;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .sports-header ul {
-    display: none; /* Dölj hela menyn */
-    flex-direction: column;
-    align-items: center;
-    background-color: #A11014; 
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    z-index: 1000;
-  }
-
-  .sports-header ul.show-menu {
-    display: flex; 
-  }
-
-  .menu-button {
-    display: block;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-  }
-
-  .sports-header li {
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-  }
 }
