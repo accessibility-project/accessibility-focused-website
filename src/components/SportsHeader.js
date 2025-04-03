@@ -24,9 +24,9 @@ const SportsHeader = () => {
                 <div className="header-temp">
                     <p className="temperature">28°</p>
                 </div>
-                <div className="header-buttons">
+                <div className="header-buttons-sports">
                     <button 
-                        className="buy-btn" 
+                        className="buy-btn-sports" 
                         onClick={() => {
                             navigate("/premium");
                             window.location.reload();
