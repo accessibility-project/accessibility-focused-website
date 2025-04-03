@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# ACCESSIBILITY-FOCUSED WEBSITE (NEWSPAGE)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
+This project is part of my thesis, *"A Comparative Study of Standard UI/UX Design and Accessibility-Focused Approaches: User Experience and Usability Analysis."*
 
-## Available Scripts
+The goal is to replicate a newspaper website and then implement accessibility guidelines based on the **European Accessibility Act (EAA)**.
 
-In the project directory, you can run:
+The original version, which does not follow accessibility guidelines, can be found here: [GitHub Repository](https://github.com/mayaaedlund/website).
 
-### `npm start`
+## Accessibility Guidelines Implemented
+The following improvements will be made to ensure the website meets accessibility standards:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Color Contrast**: The contrast ratio between text and background will be at least **4.5:1** to improve readability for visually impaired users.
+- **Scalable Text**: Users will be able to resize text without loss of functionality or readability.
+- **Alternative Text (Alt-Text)**: All images and non-text elements will include descriptive alt attributes.
+- **Keyboard Navigation**: The website will be fully operable without a mouse, ensuring that all interactive elements are accessible via keyboard inputs.
+- **Navigation Assistance**: Clear links, menus, and a *"Skip to Content"* function will be implemented to improve usability.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies
 
-### `npm test`
+- React (Frontend framework)
+- CSS (Styling)
+- Accessibility best practices
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+### Clone the repository
+`git clone git@github.com:mayaaedlund/website.git`
+`cd website`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Install dependencies 
+`npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Run the development server
+`npm start`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Open http://localhost:3000 to view it in your browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Build & Deployment
+To create a production build:
+`npm run build`
+This will generate optimized files in the build folder, ready for deployment.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Testing
+To run tests:
+`npm test`
 
-## Learn More
+## Project Scope
+- Simulate a real-world news website UI.
+- Implement WCAG (Web Content Accessibility Guidelines) principles.
+- Ensure usability for visually impaired users.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
