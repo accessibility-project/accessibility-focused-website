@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import "../styles/Sports.css";
+//import "../styles/Sports.css";
 import newsImage from "../pic/bestsports.png";
 import adPic from "../pic/beerad.png";
 import hockeyNews from "../pic/hockey-news.png";

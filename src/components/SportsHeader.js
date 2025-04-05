@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/Sports.css";
+//import "../styles/Sports.css";
 import sunIcon from "../pic/icons8-sun.svg";
 
 const SportsHeader = () => {
