@@ -175,13 +175,6 @@ html, body {
 }
 
 /* Picture on top */
-.top-image {
-  width: 100%;
-  display: flex;
-  justify-content: left;
-  padding-left: 150px;
-  margin-top: 10px;
-}
 
 .top-image img {
   width: 1000px;

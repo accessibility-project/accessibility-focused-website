@@ -14,7 +14,7 @@ function HomePage() {
             <HomeHeader />
 
             <div className="top-image">
-                <img src={newsImage} alt="Nyhetsbild" />
+                <img src={newsImage} alt="Man in a newspage studio" />
             </div>
 
             <div className="container">
@@ -130,7 +130,7 @@ function HomePage() {
 
                     <section className="ad">
                         <div>
-                            <img src={adPic} alt="Ad" />
+                            <img src={adPic} alt="Ad for Empower beer" />
                         </div>
                     </section>
                 </aside>
