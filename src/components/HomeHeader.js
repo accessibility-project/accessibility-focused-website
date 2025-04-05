@@ -47,92 +47,94 @@ function HomeHeader() {
 
 
             <nav className="main-nav">
-                <ul>
-                    <li 
-                        className="menu-item" 
-                        onClick={() => {
-                            navigate("/");
-                            window.location.reload();
-                        }}
-                        tabIndex={0}
-                        onKeyDown={(e) => e.key === "Enter" && navigate("/")}
-                    >
-                        START
-                    </li>
-                    <li 
-                        className="menu-item" 
-                        onClick={() => {
-                            navigate("/sports");
-                            window.location.reload();
-                        }}
-                        tabIndex={0}
-                        onKeyDown={(e) => e.key === "Enter" && navigate("/sports")}
-                    >
-                        SPORTS
-                    </li>
-                    <li 
-                        className="menu-item" 
-                        tabIndex={0}
-                        onKeyDown={(e) => e.key === "Enter" && alert("Premium clicked")}
-                    >
-                        PREMIUM
-                    </li>
-                    <li 
-                        className="menu-item"
-                        tabIndex={0}
-                        onKeyDown={(e) => e.key === "Enter" && alert("Discover clicked")}
-                    >
-                        DISCOVER
-                    </li>
-                    <li 
-                        className="menu-item"
-                        tabIndex={0}
-                        onKeyDown={(e) => e.key === "Enter" && alert("Entertainment clicked")}
-                    >
-                        ENTERTAINMENT
-                    </li>
-                    <li 
-                        className="menu-item"
-                        tabIndex={0}
-                        onKeyDown={(e) => e.key === "Enter" && alert("Tips clicked")}
-                    >
-                        TIPS
-                    </li>
-                    <li 
-                        className="menu-item"
-                        tabIndex={0}
-                        onKeyDown={(e) => e.key === "Enter" && alert("Culture clicked")}
-                    > CULTURE
-                    </li>
-                    <li 
-                        className="menu-item"
-                        tabIndex={0}
-                        onKeyDown={(e) => e.key === "Enter" && alert("Opinion clicked")}
-                    >
-                        OPINION
-                    </li>
-                    <li 
-                        className="menu-item"
-                        tabIndex={0}
-                        onKeyDown={(e) => e.key === "Enter" && alert("Live TV clicked")}
-                    >
-                        LIVE TV
-                    </li>
-                    <li>
-                        <button 
-                            className="menu-button" 
-                            onClick={() => setMenuOpen(!menuOpen)}
-                            tabIndex={0}
-                            onKeyDown={(e) => {
-                                if (e.key === "Enter" || e.key === " ") {
-                                    setMenuOpen(!menuOpen);
-                                }
+                <div className="nav-wrapper">
+                    <ul>
+                        <li 
+                            className="menu-item" 
+                            onClick={() => {
+                                navigate("/");
+                                window.location.reload();
                             }}
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && navigate("/")}
                         >
-                            ☰
-                        </button>
-                    </li>
-                </ul>
+                            START
+                        </li>
+                        <li 
+                            className="menu-item" 
+                            onClick={() => {
+                                navigate("/sports");
+                                window.location.reload();
+                            }}
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && navigate("/sports")}
+                        >
+                            SPORTS
+                        </li>
+                        <li 
+                            className="menu-item" 
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Premium clicked")}
+                        >
+                            PREMIUM
+                        </li>
+                        <li 
+                            className="menu-item"
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Discover clicked")}
+                        >
+                            DISCOVER
+                        </li>
+                        <li 
+                            className="menu-item"
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Entertainment clicked")}
+                        >
+                            ENTERTAINMENT
+                        </li>
+                        <li 
+                            className="menu-item"
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Tips clicked")}
+                        >
+                            TIPS
+                        </li>
+                        <li 
+                            className="menu-item"
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Culture clicked")}
+                        > CULTURE
+                        </li>
+                        <li 
+                            className="menu-item"
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Opinion clicked")}
+                        >
+                            OPINION
+                        </li>
+                        <li 
+                            className="menu-item"
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Live TV clicked")}
+                        >
+                            LIVE TV
+                        </li>
+                        <li>
+                            <button 
+                                className="menu-button" 
+                                onClick={() => setMenuOpen(!menuOpen)}
+                                tabIndex={0}
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter" || e.key === " ") {
+                                        setMenuOpen(!menuOpen);
+                                    }
+                                }}
+                            >
+                                ☰
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </nav>
 
             {menuOpen && (
@@ -140,7 +142,15 @@ function HomeHeader() {
                     <div className="menu-content">
                         {/* NEWS Section */}
                         <div className="menu-section">
-                            <h3 className="menu-title">NEWS</h3>
+                            <h3 
+                                className="menu-title"
+                                onClick={() => setIsNewsOpen(!isNewsOpen)}
+                                tabIndex="0" 
+                                role="button"
+                                aria-expanded={isNewsOpen} 
+                            >
+                            NEWS
+                            </h3>
                             <ul className="menu-list">
                                 <li>Aftonbladet Direct</li>
                                 <li>Aftonbladet Climate</li>
@@ -268,16 +278,6 @@ function HomeHeader() {
                             >
                                 {isFeaturesOpen ? "Show less" : "Show more"}
                             </button>
-                        </div>
-
-                        {/* CULTURE & OPINION Section */}
-                        <div className="menu-section">
-                            <h3 className="menu-title">CULTURE & OPINION</h3>
-                            <ul className="menu-list">
-                                <li>Debate</li>
-                                <li>Culture</li>
-                                <li>Editorial</li>
-                            </ul>
                         </div>
 
                         {/* LOGIN Section */}
