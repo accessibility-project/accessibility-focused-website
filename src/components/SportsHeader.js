@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-//import "../styles/Sports.css";
+import "../styles/SportsHeader.css";
 import sunIcon from "../pic/icons8-sun.svg";
 
 const SportsHeader = () => {
     const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
+
+    const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
+    const [isSportsOpen, setIsSportsOpen] = useState(false);
+    const [isEntertainmentOpen, setIsEntertainmentOpen] = useState(false);
+    const [isPremiumOpen, setIsPremiumOpen] = useState(false);
+    const [isNewsOpen, setIsNewsOpen] = useState(false);
 
     return (
         <div>
@@ -40,44 +46,133 @@ const SportsHeader = () => {
 
 
             <nav className="sports-nav">
-                <ul>
-                    <li onClick={() => {
-                        navigate("/")
-                        window.location.reload();
-                    }}>START</li>
-                    <li onClick={() => {
-                        navigate("/sports")
-                        window.location.reload();
-                    }}>SPORTS</li>
-                    <li>PREMIUM</li>
-                    <li>DISCOVER</li>
-                    <li>ENTERTAINMENT</li>
-                    <li>TIPS</li>
-                    <li>CULTURE</li>
-                    <li>OPINION</li>
-                    <li>LIVE TV</li>
-                    <li onClick={() => setMenuOpen(!menuOpen)} className="menu-button">
-            ☰
-                    </li>
-                </ul>
+                <div className="nav-wrapper">
+                    <ul>
+                        <li 
+                            className="menu-item" 
+                            onClick={() => {
+                                navigate("/");
+                                window.location.reload();
+                            }}
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && navigate("/")}
+                        >
+                            START
+                        </li>
+                        <li 
+                            className="menu-item" 
+                            onClick={() => {
+                                navigate("/sports");
+                                window.location.reload();
+                            }}
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && navigate("/sports")}
+                        >
+                            SPORTS
+                        </li>
+                        <li 
+                            className="menu-item" 
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Premium clicked")}
+                        >
+                            PREMIUM
+                        </li>
+                        <li 
+                            className="menu-item"
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Discover clicked")}
+                        >
+                            DISCOVER
+                        </li>
+                        <li 
+                            className="menu-item"
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Entertainment clicked")}
+                        >
+                            ENTERTAINMENT
+                        </li>
+                        <li 
+                            className="menu-item"
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Tips clicked")}
+                        >
+                            TIPS
+                        </li>
+                        <li 
+                            className="menu-item"
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Culture clicked")}
+                        >
+                            CULTURE
+                        </li>
+                        <li 
+                            className="menu-item"
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Opinion clicked")}
+                        >
+                            OPINION
+                        </li>
+                        <li 
+                            className="menu-item"
+                            tabIndex={0}
+                            onKeyDown={(e) => e.key === "Enter" && alert("Live TV clicked")}
+                        >
+                            LIVE TV
+                        </li>
+                        <li>
+                            <button 
+                                className="menu-button" 
+                                onClick={() => setMenuOpen(!menuOpen)}
+                                tabIndex={0}
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter" || e.key === " ") {
+                                        setMenuOpen(!menuOpen);
+                                    }
+                                }}
+                            >
+                                ☰
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </nav>
 
             {menuOpen && (
                 <div className="dropdown-menu">
                     <div className="menu-content-sports">
+                        {/* NEWS Section */}
                         <div className="menu-section">
-                            <h3 className="menu-title-sports">NEWS</h3>
+                            <h3 
+                                className="menu-title-sports"
+                                onClick={() => setIsNewsOpen(!isNewsOpen)}
+                                tabIndex="0" 
+                                role="button"
+                                aria-expanded={isNewsOpen} 
+                            >
+                                NEWS
+                            </h3>
                             <ul className="menu-list">
                                 <li>Aftonbladet Direct</li>
                                 <li>Aftonbladet Climate</li>
                                 <li>Columnists</li>
                                 <li>Local</li>
-                                <li>My Economy</li>
-                                <li>Swedish Heroes</li>
-                                <li>TV</li>
+                                {isNewsOpen && (
+                                    <>
+                                        <li>My Economy</li>
+                                        <li>Swedish Heroes</li>
+                                        <li>TV</li>
+                                    </>
+                                )}
                             </ul>
+                            <button 
+                                className="show-more-btn"
+                                onClick={() => setIsNewsOpen(!isNewsOpen)}
+                            >
+                                {isNewsOpen ? "Show less" : "Show more"}
+                            </button>
                         </div>
 
+                        {/* SPORTS Section */}
                         <div className="menu-section">
                             <h3 className="menu-title-sports">SPORTS</h3>
                             <ul className="menu-list">
@@ -85,17 +180,28 @@ const SportsHeader = () => {
                                 <li>Football</li>
                                 <li>Football Trip</li>
                                 <li>Hockey</li>
-                                <li>Hockey Trip</li>
-                                <li>Martial Arts</li>
-                                <li>Live TV</li>
-                                <li>Manager Games</li>
-                                <li>Motorsport</li>
-                                <li>Live Scores</li>
-                                <li>NHL Blog</li>
-                                <li>Horse Racing</li>
+                                {isSportsOpen && (
+                                    <>
+                                        <li>Hockey Trip</li>
+                                        <li>Martial Arts</li>
+                                        <li>Live TV</li>
+                                        <li>Manager Games</li>
+                                        <li>Motorsport</li>
+                                        <li>Live Scores</li>
+                                        <li>NHL Blog</li>
+                                        <li>Horse Racing</li>
+                                    </>
+                                )}
                             </ul>
+                            <button 
+                                className="show-more-btn"
+                                onClick={() => setIsSportsOpen(!isSportsOpen)}
+                            >
+                                {isSportsOpen ? "Show less" : "Show more"}
+                            </button>
                         </div>
 
+                        {/* ENTERTAINMENT Section */}
                         <div className="menu-section">
                             <h3 className="menu-title-sports">ENTERTAINMENT</h3>
                             <ul className="menu-list">
@@ -103,13 +209,24 @@ const SportsHeader = () => {
                                 <li>Eurovision</li>
                                 <li>Music</li>
                                 <li>Rock Bear Awards</li>
-                                <li>Schlager Blog</li>
-                                <li>Gaming</li>
-                                <li>Where Are They Now</li>
-                                <li>TV & Series</li>
+                                {isEntertainmentOpen && (
+                                    <>
+                                        <li>Schlager Blog</li>
+                                        <li>Gaming</li>
+                                        <li>Where Are They Now</li>
+                                        <li>TV & Series</li>
+                                    </>
+                                )}
                             </ul>
+                            <button 
+                                className="show-more-btn"
+                                onClick={() => setIsEntertainmentOpen(!isEntertainmentOpen)}
+                            >
+                                {isEntertainmentOpen ? "Show less" : "Show more"}
+                            </button>
                         </div>
 
+                        {/* PREMIUM Section */}
                         <div className="menu-section">
                             <h3 className="menu-title-sports">PREMIUM</h3>
                             <ul className="menu-list">
@@ -117,14 +234,25 @@ const SportsHeader = () => {
                                 <li>Historical Archive</li>
                                 <li>Magazines</li>
                                 <li>Newsletters</li>
-                                <li>Premium Articles</li>
-                                <li>Podcasts</li>
-                                <li>Quizzes</li>
-                                <li>Travel Guides</li>
-                                <li>Tests & Reviews</li>
+                                {isPremiumOpen && (
+                                    <>
+                                        <li>Premium Articles</li>
+                                        <li>Podcasts</li>
+                                        <li>Quizzes</li>
+                                        <li>Travel Guides</li>
+                                        <li>Tests & Reviews</li>
+                                    </>
+                                )}
                             </ul>
+                            <button 
+                                className="show-more-btn"
+                                onClick={() => setIsPremiumOpen(!isPremiumOpen)}
+                            >
+                                {isPremiumOpen ? "Show less" : "Show more"}
+                            </button>
                         </div>
 
+                        {/* FEATURES Section */}
                         <div className="menu-section">
                             <h3 className="menu-title-sports">FEATURES</h3>
                             <ul className="menu-list">
@@ -139,20 +267,21 @@ const SportsHeader = () => {
                                 <li>Travel</li>
                                 <li>Beauty</li>
                                 <li>TV Guide</li>
+                                {isFeaturesOpen && (
+                                    <>
+                                        <li>Tech</li>
+                                        <li>Science</li>
+                                        <li>Sports</li>
+                                        <li>Entertainment</li>
+                                    </>
+                                )}
                             </ul>
-                        </div>
-
-                        <div className="menu-section">
-                            <h3 className="menu-title-sports">CULTURE & OPINION</h3>
-                            <ul className="menu-list">
-                                <li>Debate</li>
-                                <li>Culture</li>
-                                <li>Editorial</li>
-                            </ul>
-                        </div>
-
-                        <div className="menu-section">
-                            <h3 className="menu-title-sports">A-Z</h3>
+                            <button 
+                                className="show-more-btn"
+                                onClick={() => setIsFeaturesOpen(!isFeaturesOpen)}
+                            >
+                                {isFeaturesOpen ? "Show less" : "Show more"}
+                            </button>
                         </div>
 
                         <div className="menu-section-login-sports">
