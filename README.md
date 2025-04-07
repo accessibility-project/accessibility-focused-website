@@ -14,6 +14,7 @@ The original version, which does not follow accessibility guidelines, can be fou
 > - Sports
 > - Buy
 > - Contact Us
+> 
 > Other routes and interactions are intentionally incomplete or non-functional, as the primary focus is on design exploration and user experience testing.
 > Please keep in mind that this is a prototype, and some elements may not work as expected.
 
