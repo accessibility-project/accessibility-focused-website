@@ -7,20 +7,15 @@ The goal is to replicate a newspaper website and then implement accessibility gu
 
 The original version, which does not follow accessibility guidelines, can be found here: [GitHub Repository](https://github.com/mayaaedlund/website).
 
-[!CAUTION] Design Prototype – Not Fully Functional
-This website is part of a design experiment, and not all features are intended to be fully functional at this stage. The header contains 8 menu items, but only the following are currently active and functional:
-
-Home
-
-Sports
-
-Buy
-
-Contact Us
-
-Other routes and interactions are intentionally incomplete or non-functional, as the primary focus is on design exploration and user experience testing.
-
-Please keep in mind that this is a prototype, and some elements may not work as expected.
+> [!CAUTION]
+> Design Prototype – Not Fully Functional
+> This website is part of a design experiment, and not all features are intended to be fully functional at this stage. The header contains 8 menu items, but only the following are currently active and functional:
+> Home
+> Sports
+> Buy
+> Contact Us
+> Other routes and interactions are intentionally incomplete or non-functional, as the primary focus is on design exploration and user experience testing.
+> Please keep in mind that this is a prototype, and some elements may not work as expected.
 
 
 ## Accessibility Guidelines Implemented
