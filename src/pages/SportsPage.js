@@ -80,7 +80,7 @@ function SportsPage() {
                     <div className="image-container">
                         <img src={hockeyNews} alt="Nyhetsbild" />
                         <div className="sports-news-container">
-                        <span
+                            <span
                                 className="big-sports-news"
                                 onClick={handleNavigate}
                             >
@@ -100,28 +100,28 @@ function SportsPage() {
             <div className="container">
                 {/* Huvudnyheter */}
                 <section className="main-news">
-                {sportsNews.map((news, index) => (
-                    <article
-                        key={news.id}
-                        className="big-news-one"
-                    >
-                        <h2>
-                            <span className={index === 0 ? "breaking-news-one-sports" : "breaking-news-sports"}>
+                    {sportsNews.map((news, index) => (
+                        <article
+                            key={news.id}
+                            className="big-news-one"
+                        >
+                            <h2>
+                                <span className={index === 0 ? "breaking-news-one-sports" : "breaking-news-sports"}>
                                 BREAKING NEWS:
-                            </span>
-                            <span
+                                </span>
+                                <span
                                     className={index === 0 ? "headline-one" : "headline"}
                                     onClick={handleNavigate}
                                 >
                                     {news.title}
-                            </span>
-                        </h2>
-                        <p className={index === 0 ? "news-description-one" : "news-description"}>
-                            {news.description}
-                        </p>
-                    </article>
-                ))}
-            </section>
+                                </span>
+                            </h2>
+                            <p className={index === 0 ? "news-description-one" : "news-description"}>
+                                {news.description}
+                            </p>
+                        </article>
+                    ))}
+                </section>
 
 
                 {/* Sidokolumn */}
