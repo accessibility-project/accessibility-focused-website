@@ -1,37 +1,34 @@
-/* Headern överst*/
-:root {
-    --ff-chrome: Arial, Helvetica, Verdana, Geneva, sans-serif;
-  }
+/* ==========================
+   CONTACTHEADER
+   ========================== */
 
-  
-body {
-    background-color: #f7f7f7;
-}
-
-.contact-header {
+   .contact-header {
     top: 0;
     left: 0;
     height: 270px;
-    background-color: rgb(221,42,48);
+    background-color: #A31F23;
     color: #FFFFFF;
     text-align: left;
     padding: 2px 150px;
     font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
     z-index: 1000;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .contact-title {
-    font-size: 34PX;
+    font-size: 2.5rem;
     color: #FFFFFF;
-    font-weight: 600;
+    font-weight: 900;
     font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
     text-align: center;
     line-height: 1.4;
-    margin-top: 70px;
+    margin-top: 50px;
+    text-transform: uppercase;
 }
 
 .contact-text {
-    font-size: 16px;
+    font-size: 1rem;
     color: #000000;
     font-weight: 400;
     text-align: center;
@@ -51,14 +48,16 @@ body {
     max-width: 1000px;
     padding: 10px;
     height: 30px;
-    border: 2px solid rgb(221,42,48);
+    border: 2px solid #A31F23;
     border-radius: 20px;
     outline: none;
     color: rgba(0, 0, 0, 0.8);
-    font-size: 18px;
+    font-size: 1.2rem;
 }
   
-
+/* ==========================
+   CONTACT
+   ========================== */
 
 .contact-container {
     display: flex;
@@ -142,7 +141,7 @@ body {
 .contact-icon {
     font-size: 40px;
     margin-top: 30px;
-    color: rgb(111, 111, 111);
+    color: #222222;
 }
 
 .contact-package-one {
@@ -163,11 +162,11 @@ body {
 
 
 .contact-card h3 {
-    font-size: 12px;
+    font-size: 1rem;
     margin-bottom: 10px;
     font-weight: 600;
     font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
-    color: rgb(111, 111, 111);
+    color: #222222;
 }
 
 .contact-card ul {
@@ -182,7 +181,7 @@ body {
 
 
 .red-check {
-    color: red;
+    color: #A31F23;
     font-weight: bold;
 }
 
@@ -191,9 +190,9 @@ body {
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: black;
+    background-color: #222222;
     color: white;
-    font-size: 12px;
+    font-size: 1rem;
     font-weight: bold;
     padding: 4px 10px;
     border-radius: 4px;
@@ -210,7 +209,7 @@ body {
 
 
 .login-info {
-    font-size: 14px;
+    font-size: 1rem;
     color: #000000;
     font-weight: 400;
     font-family: Lato, Arial, sans-serif;
@@ -220,22 +219,22 @@ body {
 .contact-package {
     font-style: inherit;
     font-weight: 900;
-    font-size: 18px;
-    color: rgb(111, 111, 111);
+    font-size: 1.5rem;
+    color: #222222;
 }
 
 .contact-info {
     font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
     font-weight: 400;
     font-style: inherit;
-    font-size: 16px;
-    color: rgb(111, 111, 111);
+    font-size: 1rem;
+    color: #222222;
 }
 
 .contact-package-one {
     font-style: inherit;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.5rem;
     color: #FFFFFF;
 }
 
@@ -243,27 +242,14 @@ body {
     font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
     font-weight: 400;
     font-style: inherit;
-    font-size: 16px;
+    font-size: 1rem;
     color: #FFFFFF;
 }
 
 
-
 @media (max-width: 768px) {
-    .contact-header {
-        height: 180px;
-        padding: 2px 20px;
-        text-align: center;
-    }
-
     .contact-title {
-        font-size: 24px;
-        margin-top: 40px;
-    }
-
-    .contact-text {
-        font-size: 14px;
-        margin-top: 20px;
+        font-size: 2rem;
     }
 
     .contact-card {
@@ -276,11 +262,42 @@ body {
         width: 90%;
         height: auto;
         padding: 15px;
+        margin-bottom: 0;
     }
 
     .contact-card-one {
         width: 100%;
         height: auto;
         padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-container {
+        display: block;
+        justify-content: center;
+        gap: 0;
+        margin-bottom: -20px;
+    }
+
+    .contact-wrapper {
+        margin-top: 30px;
+    }
+
+    .contact-card-one {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+        text-align: center;
+        position: relative;
+        padding: 15px;
+        font-weight: 200;
+        border-radius: 20px;
+        height: auto;
+        text-align: center;
+        align-items: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
 }
