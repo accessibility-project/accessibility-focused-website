@@ -5,6 +5,15 @@
   --ff-chrome: Arial, Helvetica, Verdana, Geneva, sans-serif;
 }
 
+/* Gör Link-elemntet ett blockelement som ett p-tag */
+.link {
+  display: block;
+  margin: 0;    
+  padding: 0;   
+  width: 100%;  
+}
+
+
 html, body {
     margin: 0;
     padding: 0;
@@ -73,6 +82,11 @@ body {
   margin-block-start: 0.83em;
   padding-left: 10px;
   line-height: 1.1;
+  text-decoration: none;
+}
+
+.headline:hover {
+  text-decoration: underline;
 }
 
 .news-description {
@@ -122,6 +136,11 @@ body {
   margin: 0;
   margin-block-start: 0.83em;
   padding-left: 10px;
+  text-decoration: none;
+}
+
+.headline-one:hover {
+  text-decoration: underline;
 }
 
 .news-description-one {
@@ -201,6 +220,11 @@ body {
   font-weight: bold;
   margin: 0;
   margin-left: 18px;
+  text-decoration: none;
+}
+
+.news-text:hover {
+  text-decoration: underline;
 }
 
 .direct {

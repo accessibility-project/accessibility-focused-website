@@ -1,7 +1,14 @@
 import React from "react";
 import "../styles/Premium.css";
+import { useNavigate } from "react-router-dom"; 
 
 const PremiumPage = () => {
+    const navigate = useNavigate();
+
+    const navigateToSuccess = () => {
+        navigate("/successpage");
+    };
+
     return (
         <div>
             <header className="premium-header">
@@ -28,8 +35,8 @@ const PremiumPage = () => {
                                 <li><span className="red-check">✔</span> Monthly audiobook</li>
                                 <li><span className="red-check">✔</span> Live sports & podcasts</li>
                             </ul>
-                            <button className="btn-yellow">2 MONTHS - 129 KR</button>
-                            <button className="btn-white">1 YEAR - 1490 KR</button>
+                            <button className="btn-yellow" onClick={navigateToSuccess}>2 MONTHS - 129 KR</button> 
+                            <button className="btn-white" onClick={navigateToSuccess}>1 YEAR - 1490 KR</button> 
                         </div>
                         <p className="premium-description">Renews thereafter at 149 SEK/month, cancel anytime.</p>
                     </div>
@@ -47,7 +54,7 @@ const PremiumPage = () => {
                                 <li><span className="red-check">✔</span> Premium podcasts</li>
                                 <li><span className="red-check">✔</span> Share with a friend</li>
                             </ul>
-                            <button className="btn-blue">2 MONTHS - 199 KR</button>
+                            <button className="btn-blue" onClick={navigateToSuccess}>2 MONTHS - 199 KR</button>
                         </div>
                         <p className="premium-description">Renews thereafter at 299 SEK/month. Save 58% – worth 715 SEK.</p>
                     </div>
@@ -63,7 +70,7 @@ const PremiumPage = () => {
                                 <li><span className="red-check">✔</span> <strong>New:</strong> Mardrömsgästen with Alex & Sigge</li>
                                 <li><span className="red-check">✔</span> Premium podcasts from Podme</li>
                             </ul>
-                            <button className="btn-black">2 MONTHS - 129 KR</button>
+                            <button className="btn-black" onClick={navigateToSuccess}>2 MONTHS - 129 KR</button>
                         </div>
                         <p className="premium-description">Renews thereafter at 179 SEK/month. Cancel anytime.</p>
                     </div>

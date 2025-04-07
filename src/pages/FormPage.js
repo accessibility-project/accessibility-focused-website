@@ -1,7 +1,14 @@
 import React from "react";
 import "../styles/Support.css";
+import { useNavigate } from "react-router-dom"; 
 
 const FormPage = () => {
+    const navigate = useNavigate();
+
+    const navigateToSuccess = () => {
+        navigate("/successpage");
+    };
+
     return (
         <div>
             <header className="contact-header">
@@ -17,7 +24,15 @@ const FormPage = () => {
                 <div className="support-column">
                     <h3 className="support-text"> Customer Service </h3>
                     <p> Welcome to chat with our support <span className="red-text">here</span>! </p>
-                    <p> You can also call us on weekdays from 9 AM to 12 PM at: <span className="red-text">08-725 25 25</span></p>
+                    <p> You can also call us on weekdays from 9 AM to 12 PM at: 
+                    <span 
+                            className="red-text" 
+                            style={{cursor: "pointer", textDecoration: "underline"}} 
+                            onClick={navigateToSuccess}
+                        >
+                            08-725 25 25
+                        </span>
+                    </p>
                 </div>
 
                 <div className="support-column">

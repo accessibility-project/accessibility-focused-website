@@ -117,7 +117,13 @@ html, body {
   color: #710b0e;
   margin-left: 30px;
   margin-right: 60px;
+  text-decoration: none;
 }
+
+.big-sports-news:hover {
+  text-decoration: underline;
+}
+
 
 .big-sports-text {
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
@@ -131,7 +137,7 @@ html, body {
 .sports-news-container {
   flex-direction: column;
   gap: 0px;
-  padding-bottom: 15px;
+  padding-bottom: 70px;
 }
 
 
@@ -305,6 +311,11 @@ html, body {
   font-weight: bold;
   margin: 0;
   margin-left: 18px;
+  text-decoration: none;
+}
+
+.news-text-sports:hover {
+  text-decoration: underline;
 }
 
 .direct-sports {
