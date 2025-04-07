@@ -5,7 +5,6 @@ import adPic from "../pic/beerad.png";
 import HomeHeader from "../components/HomeHeader.js";
 
 function HomePage() {
-
     return (
         <div>
 

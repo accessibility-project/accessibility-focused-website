@@ -1,0 +1,350 @@
+/* ==========================
+   HEADER STYLING
+   ========================== */
+.sports-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    gap: 10px;
+    width: 100%;
+    height: 70px;
+    background-color: #fde3e6;
+    color: #3B3B3B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--ff-chrome);
+    z-index: 1000;
+    box-shadow: 0px 4px 0px #710b0e;
+}
+
+/* Datum & Väder */
+.date, .weather {
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1;
+    padding-top: 5px;
+}
+
+.weather-location {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.weather-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.header-temp {
+    font-size: 12px;
+    font-weight: 700;
+    color: #222;
+    font-family: Verdana, sans-serif;
+}
+
+/* ==========================
+   HEADER BUTTONS
+   ========================== */
+.header-buttons-sports {
+    display: flex;
+    gap: 10px;
+    margin-left: 20%;
+    align-items: center;
+}
+
+.login-btn-sports, .buy-btn-sports {
+    width: 108px;
+    height: 32px;
+    padding: 6px 12px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    border: none;
+    cursor: pointer;
+    border-radius: 24px;
+}
+
+.login-btn-sports {
+    background-color: #710b0e;
+    color: #FFFFFF;
+}
+
+.login-btn-sports:hover, .buy-btn-sports:hover {
+    transform: scale(1.05);
+}
+
+.buy-btn-sports {
+    background-color: #f8c724;
+    color: #222;
+}
+
+.buy-btn-sports:hover {
+    background-color: #ffdb4d;
+}
+
+/* ==========================
+   NAVIGATION BAR
+   ========================== */
+
+.sports-nav {
+    width: 100%;
+    height: 50px;
+    background: #710b0e;
+    color: white;
+    font-family: var(--ff-chrome);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.nav-wrapper {
+    display: flex;
+    max-width: 1000px; 
+    margin: 0 auto;   
+    height: 100%;
+}
+
+.sports-nav ul {
+    display: flex;
+    gap: 2px;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    max-width: 100vw;
+    padding: 0;
+}
+
+.menu-item {
+    flex-shrink: 0; 
+}
+
+.sports-nav li {
+    cursor: pointer;
+    position: relative;
+    padding: 16px 10px;
+}
+
+.sports-nav li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 100%;
+    background: transparent;
+    transition: background 0.3s;
+    z-index: -1;
+}
+
+.sports-nav li:hover::before {
+    background: #710b0e;
+}
+
+/* ==========================
+   DROPDOWN MENU
+   ========================== */
+.menu-button {
+    cursor: pointer;
+    font-weight: bold;
+    all: unset;
+}
+
+.dropdown-menu {
+    top: 10px;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    background: white;
+    z-index: 1000;
+}
+
+.menu-content-sports {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 30px;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-family: var(--ff-chrome);
+}
+
+.menu-section li {
+    margin-bottom: 10px;
+}
+
+.menu-section-login-sports {
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--ff-chrome);
+    padding-left: 20px;
+    padding-right: 90px;
+    padding-bottom: 10px;
+}
+
+.menu-section-login-sports li {
+    margin-bottom: 10px;
+}
+
+.menu-title-sports {
+    font-size: 1rem;
+    line-height: 32px;
+    color: #710b0e;
+    font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.menu-title-login-sports {
+    font-size: 1rem;
+    line-height: 32px;
+    color: #000000;
+    font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.menu-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #222;
+}
+
+.menu-list li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.show-more-btn {
+    all: unset;
+    font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+    font-size: 1rem;
+    color: #222;
+    margin-top: 2px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+   ========================== */
+
+@media (max-width: 768px) {
+    .sports-nav ul {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    .menu-item {
+        display: none;
+    }
+    .menu-button {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-wrapper {
+        display: block;
+
+    }
+}
+
+/* RESPONSIVT - För små skärmar */
+@media (max-width: 1000px) {
+    .menu-section {
+      width: 90%;
+      margin-bottom: -20px;
+      border-bottom: 2px solid #710b0e;
+    }
+
+    .menu-section-login-sports {
+        border-bottom: 2px solid #710b0e;
+        width: 90%;
+      }
+    
+      .menu-content-sports {
+        padding-bottom: 20px;
+      }
+
+    .dropdown-menu {
+        top: 10px;
+        left: 0;
+        width: 100%;
+        background: white;
+        z-index: 1000;
+    }
+
+    .menu-list,
+    .show-more-btn {
+      display: none;
+    }
+
+    .menu-title-login-sports {
+        font-size: 1rem;
+        line-height: 32px;
+        color: #710b0e;
+        font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+        font-weight: 700;
+        margin-bottom: 5px;
+        letter-spacing: 0.05em;
+    }
+
+    .menu-section-login-sports {
+        background: none;
+        display: flex;
+        flex-direction: column;
+        font-family: var(--ff-chrome);
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 1050px) {
+
+    .main-header {
+        padding: 2px 20px;
+    }
+    .header-buttons {
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .header-left {
+        display: none;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+    .header-icon {
+        display: none;
+    }
+
+    .header-temp {
+        display: none;
+    }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-//import "../styles/Sports.css";
+import "../styles/Sports.css";
 import newsImage from "../pic/bestsports.png";
 import adPic from "../pic/beerad.png";
 import hockeyNews from "../pic/hockey-news.png";
@@ -12,6 +12,8 @@ function SportsPage() {
         document.body.className = "body-sports";
     }, []);
 
+    <a href="#container" className="skip-to-content">Skip to Content</a>
+
     return (
         <div>
 
@@ -21,9 +23,6 @@ function SportsPage() {
                 <img src={newsImage} alt="Nyhetsbild" />
             </div>
 
-
-
-      
             <div className="top-news">
                 <div>
                     {/* Tre nyheter i rad */}
@@ -77,7 +76,7 @@ function SportsPage() {
                 <section className="main-news">
                     <article className="big-news-one">
                         <h2>
-                            <span className="breaking-news-one">BREAKING NEWS:</span> 
+                            <span className="breaking-news-one-sports">BREAKING NEWS:</span> 
                             <span className="headline-one">Football Sensation: Underdogs Stun Champions in Historic Upset</span>
                         </h2>
                         <p className="news-description-one">The reigning league champions were left in shock as underdogs FC Thunderstorm pulled off a last-minute goal to claim victory. Fans are calling it the biggest upset of the season!</p>
