@@ -12,59 +12,61 @@ const PremiumPage = () => {
                 </h2>
             </header>
 
-            <div className="login-div">
-                <p className="login-info">Already a Premium Member? Login Here</p>
-            </div>
-
-            <div className="premium-container">
-                {/* Paket 1 */}
-                <div className="premium-wrapper">
-                    <div className="premium-card">
-                        <h3 className="premium-package">Aftonbladet Plus</h3>
-                        <p className="premium-info">All content on Aftonbladet</p>
-                        <ul className="premium-list">
-                            <li><span className="red-check">✔</span> New in-depth articles daily</li>
-                            <li><span className="red-check">✔</span> Monthly audiobook</li>
-                            <li><span className="red-check">✔</span> Live sports & podcasts</li>
-                        </ul>
-                        <button className="btn-yellow">2 MONTHS - 129 KR</button>
-                        <button className="btn-white">1 YEAR - 1490 KR</button>
-                    </div>
-                    <p className="premium-description">Renews thereafter at 149 SEK/month, cancel anytime.</p>
+            <div className="premium-side">
+                <div className="login-div">
+                    <p className="login-info-premium">Already a Premium Member? Login Here</p>
                 </div>
 
-                {/* Paket 2 */}
-                <div className="premium-wrapper">
-                    <div className="premium-card">
-                        <div className="best-value">MOST VALUE</div>
-                        <h3 className="premium-package">Super Package</h3>
-                        <p className="premium-info">News & podcasts at a great price!</p>
-                        <ul className="premium-list">
-                            <li><span className="red-check">✔</span> Aftonbladet Plus</li>
-                            <li><span className="red-check">✔</span> SvD Business</li>
-                            <li><span className="red-check">✔</span> Omni More & Economy</li>
-                            <li><span className="red-check">✔</span> Premium podcasts</li>
-                            <li><span className="red-check">✔</span> Share with a friend</li>
-                        </ul>
-                        <button className="btn-blue">2 MONTHS - 199 KR</button>
+                <div className="premium-container">
+                    {/* Paket 1 */}
+                    <div className="premium-wrapper">
+                        <div className="premium-card">
+                            <h3 className="premium-package">Aftonbladet Plus</h3>
+                            <p className="premium-info">All content on Aftonbladet</p>
+                            <ul className="premium-list">
+                                <li><span className="red-check">✔</span> New in-depth articles daily</li>
+                                <li><span className="red-check">✔</span> Monthly audiobook</li>
+                                <li><span className="red-check">✔</span> Live sports & podcasts</li>
+                            </ul>
+                            <button className="btn-yellow">2 MONTHS - 129 KR</button>
+                            <button className="btn-white">1 YEAR - 1490 KR</button>
+                        </div>
+                        <p className="premium-description">Renews thereafter at 149 SEK/month, cancel anytime.</p>
                     </div>
-                    <p className="premium-description">Renews thereafter at 299 SEK/month. Save 58% – worth 715 SEK.</p>
-                </div>
 
-                {/* Paket 3 */}
-                <div className="premium-wrapper">
-                    <div className="premium-card">
-                        <div className="best-value">AUDIO AND NEWS</div>
-                        <h3 className="premium-package">Aftonbladet Plus & Podme</h3>
-                        <p className="premium-info">News & podcasts at a great price!</p>
-                        <ul className="premium-list">
-                            <li><span className="red-check">✔</span> Aftonbladet Plus</li>
-                            <li><span className="red-check">✔</span> <strong>New:</strong> Mardrömsgästen with Alex & Sigge</li>
-                            <li><span className="red-check">✔</span> Premium podcasts from Podme</li>
-                        </ul>
-                        <button className="btn-black">2 MONTHS - 129 KR</button>
+                    {/* Paket 2 */}
+                    <div className="premium-wrapper">
+                        <div className="premium-card">
+                            <div className="best-value-premium">MOST VALUE</div>
+                            <h3 className="premium-package">Super Package</h3>
+                            <p className="premium-info">News & podcasts at a great price!</p>
+                            <ul className="premium-list">
+                                <li><span className="red-check">✔</span> Aftonbladet Plus</li>
+                                <li><span className="red-check">✔</span> SvD Business</li>
+                                <li><span className="red-check">✔</span> Omni More & Economy</li>
+                                <li><span className="red-check">✔</span> Premium podcasts</li>
+                                <li><span className="red-check">✔</span> Share with a friend</li>
+                            </ul>
+                            <button className="btn-blue">2 MONTHS - 199 KR</button>
+                        </div>
+                        <p className="premium-description">Renews thereafter at 299 SEK/month. Save 58% – worth 715 SEK.</p>
                     </div>
-                    <p className="premium-description">Renews thereafter at 179 SEK/month. Cancel anytime.</p>
+
+                    {/* Paket 3 */}
+                    <div className="premium-wrapper">
+                        <div className="premium-card">
+                            <div className="best-value-premium">AUDIO AND NEWS</div>
+                            <h3 className="premium-package">Aftonbladet Plus & Podme</h3>
+                            <p className="premium-info">News & podcasts at a great price!</p>
+                            <ul className="premium-list">
+                                <li><span className="red-check">✔</span> Aftonbladet Plus</li>
+                                <li><span className="red-check">✔</span> <strong>New:</strong> Mardrömsgästen with Alex & Sigge</li>
+                                <li><span className="red-check">✔</span> Premium podcasts from Podme</li>
+                            </ul>
+                            <button className="btn-black">2 MONTHS - 129 KR</button>
+                        </div>
+                        <p className="premium-description">Renews thereafter at 179 SEK/month. Cancel anytime.</p>
+                    </div>
                 </div>
             </div>
 
