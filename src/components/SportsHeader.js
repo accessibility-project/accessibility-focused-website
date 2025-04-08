@@ -49,7 +49,7 @@ const SportsHeader = () => {
                 <div className="nav-wrapper">
                     <ul>
                         <li 
-                            className="menu-item" 
+                            className="menu-item-sports" 
                             onClick={() => {
                                 navigate("/");
                                 window.location.reload();
@@ -60,7 +60,7 @@ const SportsHeader = () => {
                             START
                         </li>
                         <li 
-                            className="menu-item" 
+                            className="menu-item-sports" 
                             onClick={() => {
                                 navigate("/sports");
                                 window.location.reload();
@@ -71,49 +71,49 @@ const SportsHeader = () => {
                             SPORTS
                         </li>
                         <li 
-                            className="menu-item" 
+                            className="menu-item-sports" 
                             tabIndex={0}
                             onKeyDown={(e) => e.key === "Enter" && alert("Premium clicked")}
                         >
                             PREMIUM
                         </li>
                         <li 
-                            className="menu-item"
+                            className="menu-item-sports"
                             tabIndex={0}
                             onKeyDown={(e) => e.key === "Enter" && alert("Discover clicked")}
                         >
                             DISCOVER
                         </li>
                         <li 
-                            className="menu-item"
+                            className="menu-item-sports"
                             tabIndex={0}
                             onKeyDown={(e) => e.key === "Enter" && alert("Entertainment clicked")}
                         >
                             ENTERTAINMENT
                         </li>
                         <li 
-                            className="menu-item"
+                            className="menu-item-sports"
                             tabIndex={0}
                             onKeyDown={(e) => e.key === "Enter" && alert("Tips clicked")}
                         >
                             TIPS
                         </li>
                         <li 
-                            className="menu-item"
+                            className="menu-item-sports"
                             tabIndex={0}
                             onKeyDown={(e) => e.key === "Enter" && alert("Culture clicked")}
                         >
                             CULTURE
                         </li>
                         <li 
-                            className="menu-item"
+                            className="menu-item-sports"
                             tabIndex={0}
                             onKeyDown={(e) => e.key === "Enter" && alert("Opinion clicked")}
                         >
                             OPINION
                         </li>
                         <li 
-                            className="menu-item"
+                            className="menu-item-sports"
                             tabIndex={0}
                             onKeyDown={(e) => e.key === "Enter" && alert("Live TV clicked")}
                         >

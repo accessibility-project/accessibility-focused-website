@@ -118,8 +118,13 @@
     padding: 0;
 }
 
-.menu-item {
+.menu-item-sports {
     flex-shrink: 0; 
+}
+
+.menu-item-sports:hover {
+    background-color: #A31F23;
+    transition: background-color 0.3s;
 }
 
 .sports-nav li {
@@ -249,7 +254,7 @@
         justify-content: center;
         position: relative;
     }
-    .menu-item {
+    .menu-item-sports {
         display: none;
     }
     .menu-button {

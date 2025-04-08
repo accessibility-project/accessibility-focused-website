@@ -122,6 +122,12 @@
     flex-shrink: 0; 
 }
 
+.menu-item:hover {
+    background-color: #74161a;
+    transition: background-color 0.3s;
+}
+
+
 .main-nav li {
     cursor: pointer;
     position: relative;
@@ -141,7 +147,7 @@
 }
 
 .main-nav li:hover::before {
-    background: #721619;
+    background: #a8a8a8;
 }
 
 /* ==========================
