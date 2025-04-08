@@ -40,7 +40,7 @@ function SportsPage() {
 
             <SportsHeader />
 
-            <div className="top-image">
+            <div className="top-image" tabIndex="0">
                 <img src={newsImage} alt="Nyhetsbild" />
             </div>
 
@@ -48,7 +48,7 @@ function SportsPage() {
                 <div>
                     {/* Tre nyheter i rad */}
                     <div className="three-news">
-                        <div className="news-box">
+                        <div className="news-box" tabIndex="0">
                             <div className="sports-columns">
                                 <h1 className="sports-time"> 7pm </h1>
                                 <h1 className="sports-league"> - SHL (H) </h1>
@@ -57,7 +57,7 @@ function SportsPage() {
                                 <h1 className="sports-teams"> Frölunda - Timrå</h1>
                             </div>
                         </div>
-                        <div className="news-box">
+                        <div className="news-box" tabIndex="0">
                             <div className="sports-columns">
                                 <h1 className="sports-time"> 7pm </h1>
                                 <h1 className="sports-league"> - SHL (H) </h1>
@@ -66,7 +66,7 @@ function SportsPage() {
                                 <h1 className="sports-teams"> Frölunda - Timrå</h1>
                             </div>
                         </div>
-                        <div className="news-box">
+                        <div className="news-box" tabIndex="0">
                             <div className="sports-columns">
                                 <h1 className="sports-time"> 7pm </h1>
                                 <h1 className="sports-league"> - SHL (H) </h1>
@@ -80,8 +80,9 @@ function SportsPage() {
                     <div className="image-container">
                         <img src={hockeyNews} alt="Nyhetsbild" />
                         <div className="sports-news-container">
-                        <span
+                            <span
                                 className="big-sports-news"
+                                tabIndex="0"
                                 onClick={handleNavigate}
                             >
                                 18 Penalties Handed Out – After the Final Whistle!
@@ -92,7 +93,7 @@ function SportsPage() {
                 </div>
 
                 {/* Hockey-nyheten till höger om både three-news och bilden */}
-                <div className="hockey-news">
+                <div className="hockey-news" tabIndex="0">
                     <img src={hockeyNewsTwo} alt="Nyhetsbild" />
                 </div>
             </div>
@@ -100,28 +101,29 @@ function SportsPage() {
             <div className="container">
                 {/* Huvudnyheter */}
                 <section className="main-news">
-                {sportsNews.map((news, index) => (
-                    <article
-                        key={news.id}
-                        className="big-news-one"
-                    >
-                        <h2>
-                            <span className={index === 0 ? "breaking-news-one-sports" : "breaking-news-sports"}>
+                    {sportsNews.map((news, index) => (
+                        <article
+                            key={news.id}
+                            className="big-news-one"
+                            tabIndex="0"
+                        >
+                            <h2>
+                                <span className={index === 0 ? "breaking-news-one-sports" : "breaking-news-sports"}>
                                 BREAKING NEWS:
-                            </span>
-                            <span
+                                </span>
+                                <span
                                     className={index === 0 ? "headline-one" : "headline"}
                                     onClick={handleNavigate}
                                 >
                                     {news.title}
-                            </span>
-                        </h2>
-                        <p className={index === 0 ? "news-description-one" : "news-description"}>
-                            {news.description}
-                        </p>
-                    </article>
-                ))}
-            </section>
+                                </span>
+                            </h2>
+                            <p className={index === 0 ? "news-description-one" : "news-description"}>
+                                {news.description}
+                            </p>
+                        </article>
+                    ))}
+                </section>
 
 
                 {/* Sidokolumn */}
@@ -138,6 +140,7 @@ function SportsPage() {
                                     </div>
                                     <span
                                         className="news-text-sports"
+                                        tabIndex="0"
                                         onClick={handleNavigate}
                                     >
                                         {news.description}
@@ -149,7 +152,7 @@ function SportsPage() {
 
 
 
-                    <section className="ad">
+                    <section className="ad" tabIndex="0">
                         <div>
                             <img src={adPic} alt="Ad" />
                         </div>

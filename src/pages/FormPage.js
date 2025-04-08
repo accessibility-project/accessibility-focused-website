@@ -25,7 +25,7 @@ const FormPage = () => {
                     <h3 className="support-text"> Customer Service </h3>
                     <p> Welcome to chat with our support <span className="red-text">here</span>! </p>
                     <p> You can also call us on weekdays from 9 AM to 12 PM at: 
-                    <span 
+                        <span 
                             className="red-text" 
                             style={{cursor: "pointer", textDecoration: "underline"}} 
                             onClick={navigateToSuccess}

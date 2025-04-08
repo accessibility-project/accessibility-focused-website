@@ -32,11 +32,12 @@ function HomePage() {
     return (
         <div>
 
+            {/* Skip link for keyboard users */}
             <a href="#container" className="skip-to-content">Skip to Content</a>
 
             <HomeHeader />
 
-            <div className="top-image">
+            <div className="top-image" tabIndex="0">
                 <img src={newsImage} alt="Man in a newspage studio" />
             </div>
 
@@ -46,6 +47,7 @@ function HomePage() {
                     {breakingNews.map((news, index) => (
                         <article
                             key={news.id}
+                            tabIndex="0"
                             className={index === 0 ? "big-news-one" : "big-news"}
                         >
                             <h2>
@@ -80,6 +82,7 @@ function HomePage() {
                                     </div>
                                     <span
                                         className="news-text"
+                                        tabIndex="0"
                                         onClick={handleNavigate}
                                     >
                                         {news.description}
@@ -91,7 +94,7 @@ function HomePage() {
 
 
 
-                    <section className="ad">
+                    <section className="ad" tabIndex="0">
                         <div>
                             <img src={adPic} alt="Ad for Empower beer" />
                         </div>
