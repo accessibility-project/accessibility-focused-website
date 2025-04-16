@@ -29,6 +29,10 @@ function SportsPage() {
         navigate("/successpage");
     };
 
+    const navigateArticle = () => {
+        navigate("/article");
+    };
+
     useEffect(() => {
         document.body.className = "body-sports";
     }, []);
@@ -141,7 +145,7 @@ function SportsPage() {
                                     <span
                                         className="news-text-sports"
                                         tabIndex="0"
-                                        onClick={handleNavigate}
+                                        onClick={navigateArticle}
                                     >
                                         {news.description}
                                     </span>
