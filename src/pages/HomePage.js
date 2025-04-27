@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { ClickCounterContext } from "../context/ClickCounterContext";
 import "../styles/Home.css";
 import { useNavigate } from "react-router-dom";
 import newsImage from "../pic/breaking-news.jpg";
@@ -8,6 +9,8 @@ import { fetchBreakingNews, fetchLiveFeed } from "../api/newsApi.js";
 
 
 function HomePage() {
+    const { setClickCount } = useContext(ClickCounterContext);
+    const [resetMessage, setResetMessage] = useState("");
     const [breakingNews, setBreakingNews] = useState([]);
     const [liveFeed, setLiveFeed] = useState([]);
     const navigate = useNavigate();
@@ -27,6 +30,12 @@ function HomePage() {
     const handleNavigate = () => {
         navigate("/successpage");
     };
+
+    const handleKeyPress = (event) => {
+        if (event.key === "Enter") {
+            handleNavigate();
+        }
+    };
     
 
     return (
@@ -37,7 +46,7 @@ function HomePage() {
 
             <HomeHeader />
 
-            <div className="top-image" tabIndex="0">
+            <div className="top-image" tabIndex="0" onKeyDown={handleKeyPress}>
                 <img src={newsImage} alt="Man in a newspage studio" />
             </div>
 
@@ -47,7 +56,6 @@ function HomePage() {
                     {breakingNews.map((news, index) => (
                         <article
                             key={news.id}
-                            tabIndex="0"
                             className={index === 0 ? "big-news-one" : "big-news"}
                         >
                             <h2>
@@ -56,7 +64,7 @@ function HomePage() {
                                 </span>
                                 <span
                                     className={index === 0 ? "headline-one" : "headline"}
-                                    onClick={handleNavigate}
+                                    tabIndex="0" onKeyDown={handleKeyPress} onClick={handleNavigate}
                                 >
                                     {news.title}
                                 </span>
@@ -83,6 +91,7 @@ function HomePage() {
                                     <span
                                         className="news-text"
                                         tabIndex="0"
+                                        onKeyDown={handleKeyPress}
                                         onClick={handleNavigate}
                                     >
                                         {news.description}
@@ -94,7 +103,7 @@ function HomePage() {
 
 
 
-                    <section className="ad" tabIndex="0">
+                    <section className="ad" tabIndex="0" onKeyDown={handleKeyPress}>
                         <div>
                             <img src={adPic} alt="Ad for Empower beer" />
                         </div>
@@ -103,6 +112,24 @@ function HomePage() {
                 <aside className="fixed-image-column">
                 </aside>
             </div>
+
+            <a 
+                href="#" 
+                onClick={(e) => {
+                    e.preventDefault();
+                    setClickCount(0);
+                    localStorage.removeItem("clickCount");
+                    setResetMessage("Klickräknaren är nollställd!");
+                }} 
+                style={{ display: "block", textAlign: "center", marginTop: "2rem", cursor: "pointer", color: "blue", textDecoration: "underline" }}
+            >
+                Nollställ klickräknaren
+            </a>
+            {resetMessage && (
+                <p style={{ textAlign: "center", color: "blue", marginTop: "1rem" }}>
+                    {resetMessage}
+                </p>
+            )}
         </div>
     );
 }
