@@ -1,4 +1,5 @@
 import React from "react";
+import { ClickCounterProvider } from "./context/ClickCounterContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import PremiumPage from "./pages/PremiumPage";
@@ -10,17 +11,19 @@ import ArticlePage from "./pages/ArticlePage";
 
 const App = () => {
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/premium" element={<PremiumPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/sports" element={<SportsPage />} />
-                <Route path="/form" element={<FormPage />} />
-                <Route path="/successpage" element={<SuccessPage />} />
-                <Route path="/article" element={<ArticlePage />} />
-            </Routes>
-        </Router>
+        <ClickCounterProvider>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/premium" element={<PremiumPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/sports" element={<SportsPage />} />
+                    <Route path="/form" element={<FormPage />} />
+                    <Route path="/successpage" element={<SuccessPage />} />
+                    <Route path="/article" element={<ArticlePage />} />
+                </Routes>
+            </Router>
+        </ClickCounterProvider>
     );
 };
 

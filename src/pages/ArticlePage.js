@@ -1,5 +1,6 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
+import { ClickCounterContext } from "../context/ClickCounterContext";
 import authorImage from "../pic/author.png";
 import "../styles/Article.css";
 import "../styles/Sports.css";
@@ -8,6 +9,8 @@ import adPic from "../pic/beerad.png";
 import SportsHeader from "../components/SportsHeader.js";
 
 function SportsPage() {
+    const { clickCount } = useContext(ClickCounterContext);
+
     useEffect(() => {
         document.body.className = "body-sports";
     }, []);
@@ -43,6 +46,7 @@ function SportsPage() {
                             <p>The start looked like any other, but within three seconds several drivers lost control. “It was like driving on soap,” said the McLaren driver with a resigned sigh.</p>
                             <p>Ferrari’s hopes were crushed immediately as both cars collided with each other. “Incredibly ironic, but also typical of our season,” the team principal commented dryly.</p>
                             <p>The race was red-flagged, fans ducked under umbrellas, and the FIA has confirmed that an investigation into the start conditions is underway.</p>
+                            <p>Antal klick: {clickCount}</p>
                         </section>
                     </article>
                 </section>
